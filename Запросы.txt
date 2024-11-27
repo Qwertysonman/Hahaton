@@ -1,0 +1,62 @@
+/add_model/
+input:
+{
+  "name_model": "ggg"
+}
+
+output:
+{
+  "message": "Ok"
+}
+
+
+/add_file_/
+input:
+{
+  "name_model": "ggg",
+  "name": "name",
+  "description": "jkl",
+  "file_content": "q2w3ewq2"
+}
+
+output:
+{
+  "message": "Ok"
+}
+
+/get_nodel_files/
+input:
+{
+  "name_model": "ggg"
+}
+outpt:
+[
+  {
+    "id": 11,
+    "path": "C:\\Users\\User\\Desktop\\ВУЗ\\хакатон\\upload_dir\\name",
+    "description": "jkl",
+    "model_id": 4
+  }
+]
+
+/delete_file/
+input:
+{
+  "name_model": "ggg",
+  "file_name": "name"
+}
+output:
+{
+  "message": "файл модели успешно удалены"
+}
+
+
+/delete_all_files_for_model/
+input:
+{
+  "name_model": "ggg"
+}
+otput:
+{
+  "message": "Все файлы модели успешно удалены"
+}

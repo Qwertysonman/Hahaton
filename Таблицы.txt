@@ -1,0 +1,33 @@
+
+--- БД ---
+
+CREATE DATABASE "Hahatulik"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Russian_Russia.1251'
+    LC_CTYPE = 'Russian_Russia.1251'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+--- модели ---
+CREATE TABLE models(
+	id SERIAL PRIMARY KEY,
+	name_model VARCHAR(255) NOT NULL UNIQUE
+);
+
+--- кастомы к моделям ---
+
+CREATE TABLE model_files (
+	id SERIAL PRIMARY KEY,
+	model_id INTEGER NOT NULL,
+	path TEXT NOT NULL,
+	description TEXT DEFAULT ' ',
+	name VARCHAR(255) NOT NULL,
+	FOREIGN KEY (model_id) REFERENCES models (id) ON DELETE CASCADE
+)
+
+# Описание - ну чисто пользователь введет что-то + варик добавить что-то наподобии 
+ключевых слов при которых будет возникать этот кастом для модели (не реализовывал это)
