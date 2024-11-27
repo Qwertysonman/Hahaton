@@ -1,0 +1,5 @@
+host = "127.0.0.1"
+user = "postgres"
+password = "3007"
+db_name = "Hahatulik"
+uploads = r"C:\Users\User\Desktop\ВУЗ\хакатон\upload_dir"
